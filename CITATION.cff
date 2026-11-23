@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: "If you use this page or the poster, please cite the paper below once its DOI is available."
+title: "1STAR at SOICT 2026: project page"
+type: software
+authors:
+  - family-names: "Tu"
+    given-names: "Dinh-Nguyen"
+  - family-names: "Le"
+    given-names: "Minh-Trung"
+  - family-names: "Khuu"
+    given-names: "Truong-Kha"
+  - family-names: "Nguyen"
+    given-names: "Dinh-Nguyen"
+  - family-names: "Tran"
+    given-names: "Phuc-Thai"
+  - family-names: "Nguyen"
+    given-names: "Cong-Diem-Hang"
+  - family-names: "Nguyen"
+    given-names: "Hai-Dang"
+url: "https://bontaphoa.github.io/1star-soict2026/"
+repository-code: "https://github.com/BonTapHoa/1star-soict2026"
+preferred-citation:
+  type: conference-paper
+  title: "1STAR: Narrative Story Structuring for Operator-Centric Interactive Video Event Retrieval System"
+  authors:
+    - family-names: "Tu"
+      given-names: "Dinh-Nguyen"
+    - family-names: "Le"
+      given-names: "Minh-Trung"
+    - family-names: "Khuu"
+      given-names: "Truong-Kha"
+    - family-names: "Nguyen"
+      given-names: "Dinh-Nguyen"
+    - family-names: "Tran"
+      given-names: "Phuc-Thai"
+    - family-names: "Nguyen"
+      given-names: "Cong-Diem-Hang"
+    - family-names: "Nguyen"
+      given-names: "Hai-Dang"
+  collection-title: "Proceedings of the 15th International Symposium on Information and Communication Technology (SOICT 2026)"
+  publisher:
+    name: "Springer Nature"
+  year: 2026
+  notes: "DOI to be added after publication."
