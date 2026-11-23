@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>1STAR at SOICT 2026: Narrative Story Structuring for Video Event Retrieval</title>
-<meta name="description" content="Project page of 1STAR, SOICT 2026 paper 6997: narrative Story structuring for operator-centric interactive video event retrieval. Poster, figures and results.">
+<meta name="description" content="Project page of 1STAR, SOICT 2026 paper 6997: narrative Story structuring for operator-centric interactive video event retrieval. Accepted manuscript, posters, figures, results and team roles.">
 <meta name="theme-color" content="#0f488a">
 <meta property="og:type" content="website">
 <meta property="og:title" content="1STAR: Narrative Story Structuring for Operator-Centric Interactive Video Event Retrieval System">
@@ -37,6 +37,22 @@ h1{font-size:clamp(26px,4.2vw,40px);line-height:1.18;margin:0 0 18px}
 .btn{display:inline-block;padding:10px 18px;border-radius:8px;font-weight:700;text-decoration:none;font-size:16px;border:2px solid #fff;color:#fff}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
 .btn.off{opacity:.65;border-style:dashed;cursor:not-allowed}
+.nav{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:20px;font-size:15px}
+.nav a{color:#d3e6f8;text-decoration:none;border-bottom:1px solid transparent}
+.nav a:hover{border-bottom-color:#d3e6f8}
+.paperbox{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
+.paperbox .btn{color:#fff;border-color:var(--accent);background:var(--accent)}
+.posters{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;align-items:start}
+.posters figure{margin:0}
+.posters img{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;display:block}
+.posters .btn{color:#fff;border-color:var(--accent);background:var(--accent);margin-top:6px}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.role .tag2{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.role h3{margin:4px 0 10px;font-size:20px;color:var(--blue)}
+.role ul{list-style:none;margin:0;padding:0}
+.role li{padding:5px 0;border-top:1px solid var(--line)}
+.role li:first-child{border-top:0}
+.role .sub{color:var(--muted);font-size:14.5px}
 main{padding:10px 0 40px}
 section{margin-top:44px}
 h2{font-size:26px;margin:0 0 14px;color:var(--navy)}
@@ -81,10 +97,12 @@ footer p{margin:6px 0}
     <p class="affil"><sup>1</sup> High School for the Gifted, Vietnam National University Ho Chi Minh City, Vietnam<br>
       <sup>2</sup> Software Engineering Laboratory, Faculty of Information Technology, University of Science, Vietnam National University Ho Chi Minh City, Vietnam</p>
     <div class="cta">
-      <a class="btn primary" href="assets/poster/1STAR_SOICT2026_poster.pdf">Poster (PDF, A0)</a>
-      <span class="btn off" title="The Version of Record will be linked after publication in the SOICT 2026 proceedings">Paper: after publication</span>
+      <a class="btn primary" href="assets/paper/1STAR_SOICT2026_accepted_manuscript.pdf">Paper (accepted PDF)</a>
+      <a class="btn" href="assets/poster/1STAR_SOICT2026_poster.pdf">SOICT poster</a>
+      <a class="btn" href="assets/poster/AIC2026_poster.pdf">AIC HCMC poster</a>
       <a class="btn" href="#cite">Cite</a>
     </div>
+    <nav class="nav" aria-label="Sections"><a href="#abstract">Abstract</a><a href="#paper">Paper</a><a href="#story">Story</a><a href="#system">System</a><a href="#results">Results</a><a href="#finals">Finals</a><a href="#posters">Posters</a><a href="#team">Team</a><a href="#cite">Cite</a></nav>
   </div>
 </header>
 
@@ -101,6 +119,17 @@ footer p{margin:6px 0}
   <section id="abstract">
     <h2>Abstract</h2>
     <div class="abstract"><p>Interactive video event retrieval under time pressure burdens the operator as well as the engine: queries must be trimmed to fit the encoder, modalities switched on and off, and non-target segments remembered. We present 1STAR, automating these frictions by default while preserving operator control, in two ways. First, a narrative Story modality: Gemini 3.8 Flash structures Optical Character Recognition (OCR) and Automatic Speech Recognition (ASR) into Intro, Main, Bumper and Outro units, replacing noisy separate text lanes. Added to the visual index (WeMM-Embedding-2B), raw OCR and ASR lanes dilute ranking and lower Recall@50 (R@50) from 86.5% to 79.0%; the synthesized Story lane raises it to 94.0%. The same units drive Story-level deduplication and submission guardrails; on 100 hand-marked bumpers, start and end errors sum to at most 3 s (88 within 1 s). Second, this long-context embedding index accepts untrimmed hints in place of a rank fusion of three dual-encoders. On 200 team-written known-item queries (English translations) over 1.23M keyframes, untrimmed hints give Mean Reciprocal Rank (MRR) of 0.45 (R@50 86.5%), 2.4 times the 0.19 (58.0%) of the fusion fed a query an operator compressed by hand to fit its text towers. Truncating WeMM's input at 77 tokens removes the gain from added hints. In the Ho Chi Minh City AI Challenge 2026 finals, 1STAR received an Excellent overall performance rating from the organizers, securing Outstanding in Visual Known-Item Search alongside Excellent ratings in Textual Known-Item Search, Question Answering, and Temporal Retrieval and Alignment of Key Events.</p></div>
+  </section>
+
+  <section id="paper">
+    <h2>Paper</h2>
+    <div class="card">
+      <div class="paperbox">
+        <div><b>Accepted manuscript (PDF)</b><p style="margin:6px 0 0">14 pages plus a one-page publisher notice, before copy-editing and typesetting.</p></div>
+        <a class="btn" href="assets/paper/1STAR_SOICT2026_accepted_manuscript.pdf">Download (5.7 MB)</a>
+      </div>
+    </div>
+    <p class="note">This version of the contribution has been accepted for publication, after peer review (when applicable) but is not the Version of Record and does not reflect post-acceptance improvements, or any corrections. The Version of Record will be available online at <b>http://dx.doi.org/[DOI to be added after publication]</b>. Use of this Accepted Version is subject to the publisher's <a href="https://www.springernature.com/gp/open-research/policies/accepted-manuscript-terms">Accepted Manuscript terms of use</a>.</p>
   </section>
 
   <section id="problem">
@@ -148,20 +177,42 @@ footer p{margin:6px 0}
     <p class="note">Ratings are the organizers' evaluation as reported in the paper. This page does not reproduce cross-team leaderboards.</p>
   </section>
 
-  <section id="poster">
-    <h2>Poster</h2>
-    <div class="poster">
-      <a href="assets/poster/1STAR_SOICT2026_poster.pdf"><img src="assets/poster/poster-preview.png" alt="Preview of the A0 portrait poster" width="1500" height="2121" loading="lazy"></a>
-      <div>
-        <p>A0 portrait poster presented at SOICT 2026, Ho Chi Minh City.</p>
-        <p><a class="btn primary" style="color:#fff;border-color:var(--accent)" href="assets/poster/1STAR_SOICT2026_poster.pdf">Download the PDF</a></p>
-      </div>
+  <section id="posters">
+    <h2>Posters</h2>
+    <div class="posters">
+      <figure>
+        <a href="assets/poster/1STAR_SOICT2026_poster.pdf"><img src="assets/poster/poster-preview.png" alt="Preview of the A0 portrait poster presented at SOICT 2026" width="1500" height="2121" loading="lazy"></a>
+        <figcaption><b>SOICT 2026 poster</b> (A0, portrait). Presented with the paper in Ho Chi Minh City.</figcaption>
+        <a class="btn" href="assets/poster/1STAR_SOICT2026_poster.pdf">Download the PDF</a>
+      </figure>
+      <figure>
+        <a href="assets/poster/AIC2026_poster.pdf"><img src="assets/poster/aic-poster-preview.png" alt="Preview of the poster shown at the AI Challenge HCMC 2026 award day" width="1100" height="1788" loading="lazy"></a>
+        <figcaption><b>AI Challenge HCMC 2026 poster.</b> Shown at the award day, before the paper was written. It focuses on the pipeline; where its figures differ from the paper (for example R@50), the paper is authoritative.</figcaption>
+        <a class="btn" href="assets/poster/AIC2026_poster.pdf">Download the PDF</a>
+      </figure>
     </div>
+  </section>
+
+  <section id="team">
+    <h2>Team and roles</h2>
+    <div class="team">
+      <div class="card role"><div class="tag2">Role</div><h3>AI Engineer</h3><ul>
+        <li>Dinh-Nguyen Tu <span class="sub">(lead)</span></li>
+        <li>Truong-Kha Khuu</li>
+        <li>Hai-Dang Nguyen <span class="sub">(advisor)</span></li></ul></div>
+      <div class="card role"><div class="tag2">Role</div><h3>Data Engineer</h3><ul>
+        <li>Minh-Trung Le</li>
+        <li>Dinh-Nguyen Nguyen</li></ul></div>
+      <div class="card role"><div class="tag2">Role</div><h3>Frontend Developer</h3><ul>
+        <li>Phuc-Thai Tran</li>
+        <li>Cong-Diem-Hang Nguyen</li></ul></div>
+    </div>
+    <p class="note">Roles as credited on the AI Challenge HCMC 2026 poster. The students are from the High School for the Gifted, VNU-HCM; the advisor is from the Software Engineering Laboratory, University of Science, VNU-HCM.</p>
   </section>
 
   <section id="cite">
     <h2>Cite</h2>
-    <p>The Version of Record will be linked here once the SOICT 2026 proceedings (Springer CCIS) are published.</p>
+    <p>The accepted manuscript is above; the Version of Record will be linked here once the SOICT 2026 proceedings (Springer CCIS) are published.</p>
     <pre id="bib">@inproceedings{tu2026_1star,
   title     = {{1STAR}: Narrative Story Structuring for Operator-Centric
                Interactive Video Event Retrieval System},

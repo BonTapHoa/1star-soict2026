@@ -6,17 +6,21 @@ Live page: https://bontaphoa.github.io/1star-soict2026/
 
 ## What is here
 - `index.html`: the whole page (plain HTML and CSS, no build step).
-- `assets/poster/`: the A0 portrait poster (PDF) and a preview image.
+- `assets/paper/`: the accepted manuscript (PDF) with a one-page publisher notice in front. The manuscript pages are unchanged.
+- `assets/poster/`: the SOICT 2026 poster, the AI Challenge HCMC 2026 award-day poster (PDF and previews).
 - `assets/figures/`: figures taken from the poster and the paper.
 - `CITATION.cff`: citation metadata (the DOI is added after publication).
 
 ## What is not here, on purpose
-- The paper itself, until the Version of Record has a DOI. The licence allows an Accepted Manuscript on an author-maintained site only with the publisher's notice and a link to the published version.
 - System code, DRES logs and per-team scores (organizer data), raw benchmark files, and video from the AI Challenge dataset.
-- Personal contact details. Use GitHub Issues.
+- Personal contact details on the page itself. Use GitHub Issues. (The accepted manuscript PDF prints the author emails, as in the submitted paper.)
+
+## Accepted manuscript and the publisher licence
+The PDF is the Accepted Manuscript (before copy-editing). The licence allows it on an author-maintained website if it is not reformatted, carries the publisher's notice, and links to the Version of Record. The notice page is in the PDF; the DOI link is still a placeholder and must be filled in as soon as it exists (see below). The manuscript must never be shared under a Creative Commons licence.
 
 ## Updating after publication
-1. Replace the dashed "Paper: after publication" button in `index.html` with a link to `https://doi.org/<DOI>`.
+1. Add a link to `https://doi.org/<DOI>` next to the Paper button in `index.html` and replace the DOI placeholder in the notice paragraph.
+   Rebuild the notice page (`[DOI to be added after publication]`) and re-merge it in front of the manuscript PDF.
 2. Fill the DOI in the BibTeX block and in `CITATION.cff`.
 3. Add the "First published in [volume, pages, year] by Springer Nature" line to the footer.
 
