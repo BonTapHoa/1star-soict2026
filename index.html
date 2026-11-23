@@ -143,7 +143,7 @@ footer p{margin:6px 0}
 
   <section id="story">
     <h2>Story structuring: one structure, three jobs</h2>
-    <figure class="wide"><div class="scroll"><img src="assets/figures/story-structuring.png" alt="A news bulletin split by Story structuring into 23 units: intro, 19 news stories, two bumpers and an outro, compared with a fixed head and tail rule and with shot-level, video-level and Story-level result cards" width="3751" height="647" loading="lazy"></div>
+    <figure class="wide"><div class="scroll"><img src="assets/figures/story-structuring.png" alt="A news bulletin split by Story structuring into 23 units: intro, 19 news stories, two bumpers and an outro, compared with a fixed head and tail rule and with shot-level, video-level and Story-level result cards" width="3751" height="636" loading="lazy"></div>
       <figcaption>Real bulletin L21_V001 (335 shots). Gemini 3.8 Flash splits it into 23 units. A fixed head/tail 10% rule misses both bumpers; over 60 bulletins it misses all 93 teaser bumpers and flags 16.5% of valid Main Content.</figcaption></figure>
     <ul class="tight">
       <li><b>Cleaner text lane.</b> Entity-dense Story text replaces OCR and ASR tickers.</li>
@@ -154,13 +154,13 @@ footer p{margin:6px 0}
 
   <section id="system">
     <h2>1STAR: two lanes, one result list, guardrails first</h2>
-    <figure class="wide"><div class="scroll"><img src="assets/figures/architecture.png" alt="Architecture: offline indexing of 1,486 videos into a visual index, object class counts and Story units; online retrieval with translation, WeMM text encoder, FAISS, BM25 over Story, RRF fusion, Story cards, guardrails and DRES submission" width="3751" height="751" loading="lazy"></div>
+    <figure class="wide"><div class="scroll"><img src="assets/figures/architecture.png" alt="Architecture: offline indexing of 1,486 videos into a visual index, object class counts and Story units; online retrieval with translation, WeMM text encoder, FAISS, BM25 over Story, RRF fusion, Story cards, guardrails and DRES submission" width="3751" height="786" loading="lazy"></div>
       <figcaption>A: offline indexing. OCR and ASR only feed the Story generator; they are not searched as separate lanes. B: online retrieval. The visual lane gets the English translation, BM25 searches Story with the original query, and the two rankings are fused by RRF (k = 60, 0.5 vision + 0.5 Story).</figcaption></figure>
   </section>
 
   <section id="results">
     <h2>Story lifts R@50 from 79% to 94%; long context gives 2.4&times; MRR</h2>
-    <figure class="mid"><div class="scroll"><img src="assets/figures/results.png" alt="Two line charts of Recall@50 and MRR for five configurations as hints accumulate" width="2423" height="648" loading="lazy"></div>
+    <figure class="mid"><div class="scroll"><img src="assets/figures/results.png" alt="Two line charts of Recall@50 and MRR for five configurations as hints accumulate" width="2423" height="636" loading="lazy"></div>
       <figcaption>200 team-written known-item queries (English translations) over 1,486 videos and 1.23 M keyframes. Hints are released progressively; the charts show hint 1, hints 1 to 2 and hints 1 to 3.</figcaption></figure>
     <ul class="tight">
       <li><b>Long context beats fusion.</b> MRR 0.45 vs. 0.13 for the three-encoder fusion at hints 1 to 3, and 0.19 when the fusion is fed a hand-compressed query (2.4&times;). Cutting WeMM at 77 tokens removes the gain from added hints.</li>
@@ -171,8 +171,8 @@ footer p{margin:6px 0}
   <section id="finals">
     <h2>In the finals: Excellent overall, Outstanding in Visual KIS</h2>
     <div class="two">
-      <figure><img src="assets/figures/interface.png" alt="Operator interface: the query panel and the top-ranked result card, which is the target video" width="1176" height="638" loading="lazy"><figcaption>trake-04: query panel (A) and the top result; the Story query ranks the target L26_V402 first.</figcaption></figure>
-      <figure><img src="assets/figures/qa09-timeline.png" alt="Timeline of a question answering query: a bumper frame at 7:50.8 and a story frame at 8:24.0 show the same aerial shot; DRES accepts answers only between 8:22 and 9:00" width="2551" height="638" loading="lazy"><figcaption>qa-09: the bumper replays the story's aerial shot (7:50.8 vs. 8:24.0); DRES accepts only 8:22 to 9:00, and the guardrail steers the submission to Main Content.</figcaption></figure>
+      <figure><img src="assets/figures/interface.png" alt="Operator interface: the query panel and the top-ranked result card, which is the target video" width="1412" height="683" loading="lazy"><figcaption>trake-04: query panel (A) and the top result; the Story query ranks the target L26_V402 first.</figcaption></figure>
+      <figure><img src="assets/figures/qa09-timeline.png" alt="Timeline of a question answering query: a bumper frame at 7:50.8 and a story frame at 8:24.0 show the same aerial shot; DRES accepts answers only between 8:22 and 9:00" width="2315" height="683" loading="lazy"><figcaption>qa-09: the bumper replays the story's aerial shot (7:50.8 vs. 8:24.0); DRES accepts only 8:22 to 9:00, and the guardrail steers the submission to Main Content.</figcaption></figure>
     </div>
     <p class="note">Ratings are the organizers' evaluation as reported in the paper. This page does not reproduce cross-team leaderboards.</p>
   </section>
