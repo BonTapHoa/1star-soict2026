@@ -3,26 +3,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>1STAR at SOICT 2026: Narrative Story Structuring for Video Event Retrieval</title>
-<meta name="description" content="Project page of 1STAR, SOICT 2026 paper 6997: narrative Story structuring for operator-centric interactive video event retrieval. Accepted manuscript, posters, figures, results and team roles.">
-<meta name="theme-color" content="#0f488a">
+<title>1STAR at SOICT 2026: Narrative Story Structuring for Video Retrieval</title>
+<meta name="description" content="Project page of 1STAR, SOICT 2026 paper 6997: narrative Story structuring for interactive video event retrieval. Accepted manuscript, posters, figures and team.">
+<link rel="canonical" href="https://bontaphoa.github.io/1star-soict2026/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f488a'/%3E%3Cpath d='M32 10l6.5 14 15 1.8-11.2 10.2 3 15L32 43.5 18.7 51l3-15L10.5 25.8l15-1.8z' fill='%23f3b27a'/%3E%3C/svg%3E">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0f488a" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b1a2e" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:title" content="1STAR: Narrative Story Structuring for Operator-Centric Interactive Video Event Retrieval System">
 <meta property="og:description" content="SOICT 2026, paper 6997. Structure the video, not the operator.">
+<meta property="og:site_name" content="1STAR at SOICT 2026">
 <meta property="og:image" content="https://bontaphoa.github.io/1star-soict2026/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="1STAR: Structure the video, not the operator. SOICT 2026, paper 6997.">
 <meta property="og:url" content="https://bontaphoa.github.io/1star-soict2026/">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bontaphoa.github.io/1star-soict2026/assets/og.png">
 <style>
 :root{
   --navy:#0f3869; --hero:#0f488a; --blue:#0f488a; --green:#2e7d32; --amber:#a5530a; --red:#b3261e;
-  --bg:#f1f8fd; --card:#ffffff; --ink:#14213a; --muted:#50607a; --line:#bfd6ea; --accent:#d9731a;
+  --btn:#b45309; --btnh:#92400e; --bg:#f1f8fd; --card:#ffffff; --ink:#14213a; --muted:#50607a; --line:#bfd6ea; --accent:#d9731a;
 }
 @media (prefers-color-scheme: dark){
   :root{ --bg:#0b1a2e; --card:#10243f; --ink:#e8f1fb; --muted:#a9bdd6; --line:#254366;
          --blue:#7db3f0; --green:#7fd085; --amber:#f0a45f; --red:#ff8f87; }
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
 a{color:var(--blue)}
 .wrap{max-width:980px;margin:0 auto;padding:0 20px}
@@ -32,22 +41,26 @@ header.hero .wrap{padding-top:36px;padding-bottom:34px}
 h1{font-size:clamp(26px,4.2vw,40px);line-height:1.18;margin:0 0 18px}
 .authors{margin:0;font-size:18px}
 .authors b{font-weight:700}
+.au{white-space:nowrap}
+h1,h2,.tag,.kicker{text-wrap:balance}
 .affil{margin:8px 0 0;color:#d3e6f8;font-size:15px}
 .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 .btn{display:inline-block;padding:10px 18px;border-radius:8px;font-weight:700;text-decoration:none;font-size:16px;border:2px solid #fff;color:#fff}
-.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
-.btn.off{opacity:.65;border-style:dashed;cursor:not-allowed}
-.nav{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:20px;font-size:15px}
-.nav a{color:#d3e6f8;text-decoration:none;border-bottom:1px solid transparent}
+.btn{transition:background-color .15s}
+.btn:hover{background:rgba(255,255,255,.14)}
+.btn.primary{background:var(--btn);border-color:var(--btn);color:#fff}
+.btn.primary:hover,.paperbox .btn:hover,.posters .btn:hover{background:var(--btnh);border-color:var(--btnh)}
+.nav{display:flex;flex-wrap:wrap;gap:0 18px;margin-top:14px;font-size:15px}
+.nav a{color:#d3e6f8;text-decoration:none;border-bottom:1px solid transparent;padding:9px 0}
 .nav a:hover{border-bottom-color:#d3e6f8}
 .paperbox{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
-.paperbox .btn{color:#fff;border-color:var(--accent);background:var(--accent)}
+.paperbox .btn{color:#fff;border-color:var(--btn);background:var(--btn)}
 .posters{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;align-items:start}
 .posters figure{margin:0}
 .posters img{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;display:block}
-.posters .btn{color:#fff;border-color:var(--accent);background:var(--accent);margin-top:6px}
+.posters .btn{color:#fff;border-color:var(--btn);background:var(--btn);margin-top:6px}
 .team{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-.role .tag2{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.role .tag2{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
 .role h3{margin:4px 0 10px;font-size:20px;color:var(--blue)}
 .role ul{list-style:none;margin:0;padding:0}
 .role li{padding:5px 0;border-top:1px solid var(--line)}
@@ -55,7 +68,7 @@ h1{font-size:clamp(26px,4.2vw,40px);line-height:1.18;margin:0 0 18px}
 .role .sub{color:var(--muted);font-size:14.5px}
 main{padding:10px 0 40px}
 section{margin-top:44px}
-h2{font-size:26px;margin:0 0 14px;color:var(--navy)}
+h2{font-size:26px;line-height:1.25;margin:0 0 14px;color:var(--navy)}
 @media (prefers-color-scheme: dark){ h2{color:#fff} }
 .kicker{font-size:34px;font-weight:800;line-height:1.15;margin:32px 0 6px;color:var(--navy)}
 .kicker span{color:var(--blue)}
@@ -70,30 +83,36 @@ h2{font-size:26px;margin:0 0 14px;color:var(--navy)}
 figure{margin:18px 0 0;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
 .scroll{overflow-x:auto}
 figure img{display:block;width:100%;height:auto}
-.wide img{min-width:760px}
-.mid img{min-width:560px}
+.scroll:focus-visible,pre:focus-visible{outline-offset:-3px}
+.figtools{margin:8px 2px 0;font-size:14.5px;color:var(--muted)}
+.figtools a{display:inline-block;padding:6px 0}
+.swipe{display:none}
+@media (max-width:820px){.swipe{display:inline}}
+.wide img{min-width:900px}
+.mid img{min-width:700px}
 figcaption{color:var(--muted);font-size:15px;margin-top:10px}
 .two{display:grid;grid-template-columns:1fr 1.5fr;gap:16px}
 @media (max-width:760px){.two{grid-template-columns:1fr}}
 ul.tight{padding-left:20px;margin:10px 0}
 ul.tight li{margin:6px 0}
-.poster{display:grid;grid-template-columns:minmax(0,320px) 1fr;gap:24px;align-items:start}
-@media (max-width:760px){.poster{grid-template-columns:1fr}}
-.poster img{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;display:block}
-pre{background:#0f1b2d;color:#e8edf5;border-radius:10px;padding:16px;overflow:auto;font:14px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;margin:12px 0 0}
+pre{background:#0f1b2d;color:#e8edf5;border:1px solid #2a4468;border-radius:10px;padding:16px;overflow:auto;font:14px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;margin:12px 0 0}
 button.copy{margin-top:10px;padding:8px 14px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:15px;cursor:pointer}
 .note{background:var(--card);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;color:var(--muted);font-size:15.5px;margin-top:14px}
 footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);font-size:14.5px}
 footer p{margin:6px 0}
 :focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+header.hero :focus-visible{outline-color:#fff}
+.skip{position:absolute;left:12px;top:-60px;background:#fff;color:#0f3869;font-weight:700;padding:10px 16px;border-radius:8px;z-index:10;text-decoration:none}
+.skip:focus{top:12px}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header class="hero">
   <div class="wrap">
     <p class="tag">SOICT 2026 &middot; Paper ID 6997 &middot; Oral and poster</p>
     <h1>1STAR: Narrative Story Structuring for Operator-Centric Interactive Video Event Retrieval System</h1>
-    <p class="authors"><b>Dinh-Nguyen Tu</b><sup>1</sup>, Minh-Trung Le<sup>1</sup>, Truong-Kha Khuu<sup>1</sup>, Dinh-Nguyen Nguyen<sup>1</sup>, Phuc-Thai Tran<sup>1</sup>, Cong-Diem-Hang Nguyen<sup>1</sup>, Hai-Dang Nguyen<sup>2,1</sup></p>
+    <p class="authors"><span class="au"><b>Dinh-Nguyen Tu</b><sup>1</sup>,</span> <span class="au">Minh-Trung Le<sup>1</sup>,</span> <span class="au">Truong-Kha Khuu<sup>1</sup>,</span> <span class="au">Dinh-Nguyen Nguyen<sup>1</sup>,</span> <span class="au">Phuc-Thai Tran<sup>1</sup>,</span> <span class="au">Cong-Diem-Hang Nguyen<sup>1</sup>,</span> <span class="au">Hai-Dang Nguyen<sup>2,1</sup></span></p>
     <p class="affil"><sup>1</sup> High School for the Gifted, Vietnam National University Ho Chi Minh City, Vietnam<br>
       <sup>2</sup> Software Engineering Laboratory, Faculty of Information Technology, University of Science, Vietnam National University Ho Chi Minh City, Vietnam</p>
     <div class="cta">
@@ -106,7 +125,7 @@ footer p{margin:6px 0}
   </div>
 </header>
 
-<main class="wrap">
+<main class="wrap" id="main" tabindex="-1">
   <p class="kicker">Structure the video, <span>not the operator.</span></p>
   <p style="margin:0;color:var(--muted)">Story units replace query trimming, modality switching and bumper memory in interactive known-item search.</p>
 
@@ -143,7 +162,8 @@ footer p{margin:6px 0}
 
   <section id="story">
     <h2>Story structuring: one structure, three jobs</h2>
-    <figure class="wide"><div class="scroll"><img src="assets/figures/story-structuring.png" alt="A news bulletin split by Story structuring into 23 units: intro, 19 news stories, two bumpers and an outro, compared with a fixed head and tail rule and with shot-level, video-level and Story-level result cards" width="3751" height="636" loading="lazy"></div>
+    <figure class="wide"><div class="scroll" tabindex="0" role="region" aria-label="Story structuring figure, scrolls sideways on narrow screens"><img src="assets/figures/story-structuring.png" alt="A news bulletin split by Story structuring into 23 units: intro, 19 news stories, two bumpers and an outro, compared with a fixed head and tail rule and with shot-level, video-level and Story-level result cards" width="3751" height="636" loading="lazy"></div>
+      <p class="figtools"><a href="assets/figures/story-structuring.png" target="_blank" rel="noopener">Open full size</a><span class="swipe"> &middot; swipe sideways to see the whole figure</span></p>
       <figcaption>Real bulletin L21_V001 (335 shots). Gemini 3.8 Flash splits it into 23 units. A fixed head/tail 10% rule misses both bumpers; over 60 bulletins it misses all 93 teaser bumpers and flags 16.5% of valid Main Content.</figcaption></figure>
     <ul class="tight">
       <li><b>Cleaner text lane.</b> Entity-dense Story text replaces OCR and ASR tickers.</li>
@@ -154,13 +174,15 @@ footer p{margin:6px 0}
 
   <section id="system">
     <h2>1STAR: two lanes, one result list, guardrails first</h2>
-    <figure class="wide"><div class="scroll"><img src="assets/figures/architecture.png" alt="Architecture: offline indexing of 1,486 videos into a visual index, object class counts and Story units; online retrieval with translation, WeMM text encoder, FAISS, BM25 over Story, RRF fusion, Story cards, guardrails and DRES submission" width="3751" height="786" loading="lazy"></div>
+    <figure class="wide"><div class="scroll" tabindex="0" role="region" aria-label="Architecture figure, scrolls sideways on narrow screens"><img src="assets/figures/architecture.png" alt="Architecture: offline indexing of 1,486 videos into a visual index, object class counts and Story units; online retrieval with translation, WeMM text encoder, FAISS, BM25 over Story, RRF fusion, Story cards, guardrails and DRES submission" width="3751" height="786" loading="lazy"></div>
+      <p class="figtools"><a href="assets/figures/architecture.png" target="_blank" rel="noopener">Open full size</a><span class="swipe"> &middot; swipe sideways to see the whole figure</span></p>
       <figcaption>A: offline indexing. OCR and ASR only feed the Story generator; they are not searched as separate lanes. B: online retrieval. The visual lane gets the English translation, BM25 searches Story with the original query, and the two rankings are fused by RRF (k = 60, 0.5 vision + 0.5 Story).</figcaption></figure>
   </section>
 
   <section id="results">
     <h2>Story lifts R@50 from 79% to 94%; long context gives 2.4&times; MRR</h2>
-    <figure class="mid"><div class="scroll"><img src="assets/figures/results.png" alt="Two line charts of Recall@50 and MRR for five configurations as hints accumulate" width="2423" height="636" loading="lazy"></div>
+    <figure class="mid"><div class="scroll" tabindex="0" role="region" aria-label="Results charts, scrolls sideways on narrow screens"><img src="assets/figures/results.png" alt="Two line charts of Recall@50 and MRR for five configurations as hints accumulate" width="2423" height="636" loading="lazy"></div>
+      <p class="figtools"><a href="assets/figures/results.png" target="_blank" rel="noopener">Open full size</a><span class="swipe"> &middot; swipe sideways to see the whole figure</span></p>
       <figcaption>200 team-written known-item queries (English translations) over 1,486 videos and 1.23 M keyframes. Hints are released progressively; the charts show hint 1, hints 1 to 2 and hints 1 to 3.</figcaption></figure>
     <ul class="tight">
       <li><b>Long context beats fusion.</b> MRR 0.45 vs. 0.13 for the three-encoder fusion at hints 1 to 3, and 0.19 when the fusion is fed a hand-compressed query (2.4&times;). Cutting WeMM at 77 tokens removes the gain from added hints.</li>
@@ -181,12 +203,12 @@ footer p{margin:6px 0}
     <h2>Posters</h2>
     <div class="posters">
       <figure>
-        <a href="assets/poster/1STAR_SOICT2026_poster.pdf"><img src="assets/poster/poster-preview.png" alt="Preview of the A0 portrait poster presented at SOICT 2026" width="1500" height="2121" loading="lazy"></a>
-        <figcaption><b>SOICT 2026 poster</b> (A0, portrait). Presented with the paper in Ho Chi Minh City.</figcaption>
+        <a href="assets/poster/1STAR_SOICT2026_poster.pdf"><img src="assets/poster/poster-preview.webp" alt="Preview of the A0 portrait poster presented at SOICT 2026" width="1500" height="2121" loading="lazy"></a>
+        <figcaption><b>SOICT 2026 poster</b> (A0, portrait). To be presented with the paper at SOICT 2026 in Ho Chi Minh City (December 2026).</figcaption>
         <a class="btn" href="assets/poster/1STAR_SOICT2026_poster.pdf">Download the PDF</a>
       </figure>
       <figure>
-        <a href="assets/poster/AIC2026_poster.pdf"><img src="assets/poster/aic-poster-preview.png" alt="Preview of the poster shown at the AI Challenge HCMC 2026 award day" width="1100" height="1788" loading="lazy"></a>
+        <a href="assets/poster/AIC2026_poster.pdf"><img src="assets/poster/aic-poster-preview.webp" alt="Preview of the poster shown at the AI Challenge HCMC 2026 award day" width="1100" height="1788" loading="lazy"></a>
         <figcaption><b>AI Challenge HCMC 2026 poster.</b> Shown at the award day, before the paper was written. It focuses on the pipeline; where its figures differ from the paper (for example R@50), the paper is authoritative.</figcaption>
         <a class="btn" href="assets/poster/AIC2026_poster.pdf">Download the PDF</a>
       </figure>
@@ -203,7 +225,7 @@ footer p{margin:6px 0}
       <div class="card role"><div class="tag2">Role</div><h3>Data Engineer</h3><ul>
         <li>Minh-Trung Le</li>
         <li>Dinh-Nguyen Nguyen</li></ul></div>
-      <div class="card role"><div class="tag2">Role</div><h3>Frontend Developer</h3><ul>
+      <div class="card role"><div class="tag2">Role</div><h3>Full-stack Developer</h3><ul>
         <li>Phuc-Thai Tran</li>
         <li>Cong-Diem-Hang Nguyen</li></ul></div>
     </div>
@@ -213,7 +235,7 @@ footer p{margin:6px 0}
   <section id="cite">
     <h2>Cite</h2>
     <p>The accepted manuscript is above; the Version of Record will be linked here once the SOICT 2026 proceedings (Springer CCIS) are published.</p>
-    <pre id="bib">@inproceedings{tu2026_1star,
+    <pre id="bib" tabindex="0" aria-label="BibTeX entry">@inproceedings{tu2026_1star,
   title     = {{1STAR}: Narrative Story Structuring for Operator-Centric
                Interactive Video Event Retrieval System},
   author    = {Tu, Dinh-Nguyen and Le, Minh-Trung and Khuu, Truong-Kha and
@@ -225,7 +247,7 @@ footer p{margin:6px 0}
   year      = {2026},
   note      = {DOI to be added after publication}
 }</pre>
-    <button class="copy" type="button" id="copybib">Copy BibTeX</button>
+    <button class="copy" type="button" id="copybib" aria-live="polite">Copy BibTeX</button>
   </section>
 
   <section id="contact">
