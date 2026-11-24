@@ -87,6 +87,9 @@ h3{font-size:21px;line-height:1.3;margin:0 0 12px;color:var(--navy)}
 .card p{margin:8px 0 0;color:var(--muted);font-size:15.5px}
 .c-green .big{color:var(--green)} .c-blue .big{color:var(--blue)} .c-red .big{color:var(--red)} .c-aic .big{color:var(--aic)}
 .card .lab{font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:var(--muted);margin-bottom:6px}
+.stats{grid-template-columns:repeat(4,1fr)}
+@media (max-width:960px){.stats{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.stats{grid-template-columns:1fr}}
 .lede{margin:0 0 6px;color:var(--muted);font-size:18px}
 .src{display:block;margin-top:8px;font-size:14.5px;color:var(--muted)}
 .src a{display:inline-block;padding:5px 2px}
@@ -233,10 +236,11 @@ footer p{margin:6px 0}
 
     <section id="challenge">
       <h3>The competition in numbers</h3>
-      <div class="cards" data-src="ptnk-aic">
+      <div class="cards stats" data-src="ptnk-aic">
         <div class="card c-aic"><div class="big">811</div><p>teams entered</p></div>
         <div class="card c-aic"><div class="big">4,005</div><p>contestants from 198 organisations</p></div>
         <div class="card c-aic"><div class="big">740</div><p>high-school students from 95 schools, in their own board (Board B)</p></div>
+        <div class="card c-aic" data-src="ptnk-aic paper"><div class="big">80+</div><p>teams took part in the finals</p></div>
       </div>
       <span class="src" data-src="ptnk-aic">Figures from the school's report of the ceremony: <a href="https://ptnk.edu.vn/aichallenge-ptnk/" hreflang="vi" rel="noopener">read it (Vietnamese)</a>.</span>
       <dl class="facts" data-src="paper">
@@ -260,9 +264,10 @@ footer p{margin:6px 0}
       <h3>Finals and award day</h3>
       <p class="lede" data-src="paper">1STAR competed in the high-school board (Table B in the paper), which has its own prizes.</p>
       <div class="cards">
-        <div class="card c-aic" data-src="ptnk-aic"><div class="lab">Prize, as announced by the school</div><div class="big">Encouragement Prize</div><p>Giải Khuyến khích</p></div>
-        <div class="card c-blue" data-src="paper"><div class="lab">Ratings by the organizers, as reported in the paper</div><div class="big">Excellent overall</div><p>Outstanding in Visual KIS; Excellent in Textual KIS, QA and TRAKE.</p></div>
+        <div class="card c-aic" data-src="ptnk-aic"><div class="lab">Prize from the organizers</div><div class="big">Encouragement Prize</div><p>Giải Khuyến khích, announced at the award ceremony.</p></div>
+        <div class="card c-blue" data-src="paper acceptance"><div class="lab">Overall rating from the organizers</div><div class="big">Excellent overall</div><p>Outstanding in Visual KIS; Excellent in Textual KIS, QA and TRAKE.</p></div>
       </div>
+      <p data-src="paper acceptance">Both come from the organizers of the AI Challenge HCMC 2026. The prize was announced at the ceremony. The overall rating was sent to the team by the chair of the SOICT 2026 track when the paper was accepted, and the paper reports it.</p>
       <figure class="photo" data-src="ptnk-aic fb-aic">
         <img src="assets/media/aic-award-1280.webp" srcset="assets/media/aic-award-640.webp 640w, assets/media/aic-award-1280.webp 1280w" sizes="(min-width:1040px) 1000px, 100vw" width="1280" height="852" loading="lazy" alt="On a stage under the banner of the AI Challenge HCMC 2026 award ceremony, a row of students from the High School for the Gifted hold framed certificates beside an official in a blue dress, while the audience in the foreground raises phones.">
         <figcaption>PTNK teams on stage at the award ceremony, HCMUT, 17 October 2026. Photo: PTNK Facebook page, from <a href="https://www.facebook.com/share/p/1EFbbL7mHK/" hreflang="vi" rel="noopener noreferrer">its post</a>.</figcaption>
@@ -273,7 +278,7 @@ footer p{margin:6px 0}
         <figure><img src="assets/figures/interface.png" alt="Operator interface: the query panel and the top-ranked result card, which is the target video" width="1412" height="683" loading="lazy"><p class="figtools"><a href="assets/figures/interface.png" target="_blank" rel="noopener">Open full size</a></p><figcaption>trake-04: query panel (A) and the top result; the Story query ranks the target L26_V402 first.</figcaption></figure>
         <figure><img src="assets/figures/qa09-timeline.png" alt="Timeline of a question answering query: a bumper frame at 7:50.8 and a story frame at 8:24.0 show the same aerial shot; DRES accepts answers only between 8:22 and 9:00" width="2315" height="683" loading="lazy"><p class="figtools"><a href="assets/figures/qa09-timeline.png" target="_blank" rel="noopener">Open full size</a></p><figcaption>qa-09: the bumper replays the story's aerial shot (7:50.8 vs. 8:24.0); DRES accepts only 8:22 to 9:00, and the guardrail steers the submission to Main Content.</figcaption></figure>
       </div>
-      <p class="note">Ratings are the organizers' evaluation as reported in the paper; prizes are as announced by the school. This page does not reproduce cross-team leaderboards.</p>
+      <p class="note">The prize and the ratings both come from the organizers. This page does not reproduce cross-team leaderboards.</p>
     </section>
   </section>
 
