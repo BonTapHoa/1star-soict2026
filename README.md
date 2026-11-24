@@ -7,7 +7,7 @@ Live page: https://bontaphoa.github.io/1star-soict2026/
 ## What is here
 - `index.html`: the whole page (plain HTML and CSS, no build step). Layout: hero with the team photo and two entry cards, a timeline, Part 1 (the competition), Part 2 (the paper), posters, press and interview, team, cite.
 - `assets/paper/`: the accepted manuscript (PDF) with a one-page publisher notice in front. The manuscript pages are unchanged.
-- `assets/poster/`: the SOICT 2026 poster, the AI Challenge HCMC 2026 award-day poster (PDF and previews).
+- `assets/poster/`: the SOICT 2026 poster and the AI Challenge HCMC 2026 award-day poster, each as PDF and as editable PPTX (plus previews). Both PPTX files are built from code and carry the team as author.
 - `assets/figures/`: figures taken from the poster and the paper.
 - `assets/media/`: two press photos (team photo, award-ceremony photo) from the school's website and Facebook page, re-encoded as WebP without metadata, with attribution on the page.
 - `CITATION.cff`: citation metadata (the DOI is added after publication).
